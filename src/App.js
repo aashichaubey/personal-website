@@ -9,6 +9,7 @@ import Contact from "./Contact";
 import ParticlesComponent from './particles';
 import "@fontsource/poppins";
 import Conbar from "./Conbar";
+import ViewCounter from "./ViewCounter";
 
 function App() {
   useEffect(() => {//custom cursor
@@ -34,6 +35,7 @@ function App() {
         <Work />
         <Contact />
       </div>
+      <ViewCounter />
     </div>
   );
 }
