@@ -1,0 +1,21 @@
+import React from 'react';
+import './Projects.css';
+
+function Projects() {
+    return (
+        <div className="projects">
+            <h3 className="section-title">what i've built</h3>
+            <ul className="projects-list">
+                <li><span className="project-icon">&#x21B3;</span> brain v2 <span className="project-description"> - memory bank for ai agents (1st overall, shopify) 1450</span></li>
+                <li><span className="project-icon">&#x21B3;</span> <a href="#" className="project-link">nexplaybook</a> <span className="project-description"> - polymarket chrome extension</span></li>
+                <li><span className="project-icon">&#x21B3;</span> <a href="#" className="project-link">wingman </a> <span className="project-description"> - ai wingman for chats</span></li>
+                <li><span className="project-icon">&#x21B3;</span> <a href="#" className="project-link">dermacare </a> <span className="project-description"> - scans barcodes of skincare to identify harmful ingredients</span></li>
+                <li><span className="project-icon">&#x21B3;</span> end to end vehicle investigator <span className="project-description"> -(3rd overall, motorola)</span></li>
+                <li><span className="project-icon">&#x21B3;</span> <a href="#" className="project-link">spine guard </a> <span className="project-description"> - wearable posture tracker (best healthtech hack) 600+</span></li>
+                <li><span className="project-icon">&#x21B3;</span> <a href="#" className="project-link">platecheck</a> <span className="project-description"> - women's nutrient tracker app (1st overall)</span></li>
+            </ul>
+        </div>
+    );
+}
+
+export default Projects;

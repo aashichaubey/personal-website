@@ -1,0 +1,46 @@
+.experience {
+    color: #fff;
+    margin-top: 32px;
+}
+
+.experience-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.experience-list li {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #d4d4d4;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.exp-arrow {
+    font-size: 13px;
+    color: #999;
+    flex-shrink: 0;
+    transition: color 0.2s;
+}
+
+.exp-link {
+    color: #d4d4d4;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.exp-link:hover {
+    color: #fff;
+}
+
+.experience-list li:hover .exp-arrow {
+    color: #fff;
+}
+
+.exp-logo {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}

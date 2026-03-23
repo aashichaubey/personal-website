@@ -1,0 +1,51 @@
+.projects {
+    color: #fff;
+    margin-top: 32px;
+}
+
+.section-title {
+    font-size: 14px;
+    font-weight: 400;
+    color: #d4d4d4;
+    margin-bottom: 12px;
+}
+
+.projects-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.projects-list li {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #d4d4d4;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.project-icon {
+    font-size: 13px;
+    color: #999;
+    flex-shrink: 0;
+    transition: color 0.2s;
+}
+
+.project-link {
+    color: #d4d4d4;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.project-link:hover {
+    color: #fff;
+}
+
+.projects-list li:hover .project-icon {
+    color: #fff;
+}
+
+.project-description {
+    color: #999;
+}
