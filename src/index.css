@@ -23,7 +23,7 @@ body {
   justify-content: center;
   align-items: flex-start;
   min-height: 100dvh;
-  padding-top: 48px;
+  padding-top: 12px;
 }
 
 .page-inner {
