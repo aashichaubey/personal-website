@@ -1,4 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100..900&display=swap');
+
 body {
   margin: 0;
-  background: #000;
+  background: #0f0f11ff;
+  font-family: 'Inter Tight', sans-serif;
+  color: #fff;
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  margin-top: 100px;
+}
+
+.page-inner {
+  width: 100%;
+  max-width: 600px;
+  padding: 0 24px;
+  padding-bottom: 40px;
 }
