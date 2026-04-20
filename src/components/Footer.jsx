@@ -1,7 +1,48 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
 import './Footer.css';
 
 function Footer() {
+    const [viewStats, setViewStats] = useState({ totalViews: null, uniqueViews: null });
+
+    useEffect(() => {
+        let isMounted = true;
+
+        async function loadViewStats() {
+            const shouldExclude = localStorage.getItem("excludeViews") === "true";
+            const hasCountedSession = sessionStorage.getItem("viewCounted") === "true";
+            const method = shouldExclude || hasCountedSession ? "GET" : "POST";
+
+            const response = await fetch("/api/views", {
+                method,
+                headers: shouldExclude ? { "x-viewer-exclude": "1" } : undefined,
+            });
+
+            if (!response.ok) {
+                return;
+            }
+
+            const data = await response.json();
+            if (isMounted) {
+                setViewStats({
+                    totalViews: data.totalViews,
+                    uniqueViews: data.uniqueViews,
+                });
+            }
+
+            if (method === "POST" && data.counted) {
+                sessionStorage.setItem("viewCounted", "true");
+            }
+        }
+
+        loadViewStats().catch(() => {
+            // Silently ignore so footer still renders if API is unavailable.
+        });
+
+        return () => {
+            isMounted = false;
+        };
+    }, []);
+
     return (
         <footer className="footer">
             <div className="footer-content">
@@ -24,6 +65,12 @@ function Footer() {
                 </div>
                 <div className="copyright">
                     &copy; 2026 aashi chaubey all rights reserved
+                    {viewStats.totalViews !== null && (
+                        <span className="viewer-stats">
+                            {" "}| {viewStats.totalViews} views
+                            {viewStats.uniqueViews !== null ? ` (${viewStats.uniqueViews} unique)` : ""}
+                        </span>
+                    )}
                 </div>
             </div>
         </footer>
