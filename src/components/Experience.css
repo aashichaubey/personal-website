@@ -44,3 +44,8 @@
     height: 20px;
     object-fit: contain;
 }
+
+/* shopify.png has transparent padding around the bag */
+.exp-logo-shopify {
+    margin-right: -4px;
+}

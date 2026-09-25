@@ -41,3 +41,11 @@
     object-fit: contain;
     transform: translateY(5px);
 }
+
+.intro-icon-square {
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+    vertical-align: -2px;
+    margin: 0 4px 0 2px;
+}

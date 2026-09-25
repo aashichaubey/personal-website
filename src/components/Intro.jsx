@@ -1,7 +1,7 @@
 import React from 'react';
 import './Intro.css';
 import university from '/public/uw.png';
-import shopify from '/public/shopify.png';
+import senpilot from '/public/senpilot_logo.jpeg';
 
 function Intro() {
     return (
@@ -11,7 +11,7 @@ function Intro() {
                 computer engineering @ <img src={university} alt="UW" className="intro-icon" /><a href="https://uwaterloo.ca/" target="_blank" rel="noopener noreferrer" className="intro-link"> university of waterloo</a>
             </p>
             <p className="bio fade-in" style={{ animationDelay: '300ms' }}>
-                currently @ <img src={shopify} alt="Shopify" className="intro-icon" /><a href="https://www.shopify.com" target="_blank" rel="noopener noreferrer" className="intro-link">shopify</a>, building <a href="https://www.shopify.com/ca/shop-campaigns" className="inline-link" target="_blank" rel="noopener noreferrer">shop campaigns</a>
+                currently @ <img src={senpilot} alt="Senpilot" className="intro-icon-square" /><a href="https://www.senpilot.com" target="_blank" rel="noopener noreferrer" className="intro-link">senpilot</a>, building field app
             </p>
             <p className="bio fade-in" style={{ animationDelay: '450ms' }}>
                 interested in ai and autonomous systems
